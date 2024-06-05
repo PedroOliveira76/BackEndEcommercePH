@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# TypeScript compiled output
+dist/
+
+# Optional npm cache directory
+.npm/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Other IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# TypeScript configuration files
+tsconfig.tsbuildinfo
