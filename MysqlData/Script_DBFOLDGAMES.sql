@@ -1,3 +1,5 @@
+create database foldGames;
+use foldGames;
 create table users(
 	id int auto_increment primary key,
     email varchar(100) not null,
@@ -20,7 +22,7 @@ create table products (
 
 create table paymentType(
 	id int auto_increment primary key,
-    tipo enum('pix', 'cartão', 'dinheiro') not null
+    tipo enum('pix', 'cartão') not null
 );
 
 create table shoppingCart(
@@ -30,13 +32,6 @@ create table shoppingCart(
     quantidade int not null,
     FOREIGN KEY (id_usuario) REFERENCES users(id),
     FOREIGN KEY (id_produto) REFERENCES products(id)
-);
-
-create table enderecos_entrega (
-    id int auto_increment primary key,
-	id_usuario int not null,
-    endereco varchar(255) not null,
-    FOREIGN KEY (id_usuario) REFERENCES users(id)
 );
 
 CREATE TABLE pedidos (
